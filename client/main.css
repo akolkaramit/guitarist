@@ -1,0 +1,569 @@
+html { position: relative; min-height: 100%; }
+
+body{
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #000;
+}
+
+.activeGuitarLink {
+    color:#fff !important;
+    /* font-weight: bold; */
+}
+
+.activeGuitarLinkCom {
+    color: #ddd;
+}
+/* ====================== Header ===================== */
+.guitar-nav{
+    width: 50px;
+}
+
+.guitar-container {
+    padding: 0;
+}
+
+.guitar-login {
+    background: #0b72e0 !important;
+    padding: 5px 20px;
+    cursor: pointer;
+    color: #fff !important;
+}
+
+.userSignUp {
+    border: 2px solid #eee;
+    color: #444;
+    background: #eee;
+    cursor: pointer;
+}
+
+.userSignUp:hover {
+    color: #000;
+}
+
+.userLogin {
+    border: 2px solid #eee;
+    color: #444;
+    background: #eee;
+    cursor: pointer;
+}
+
+.userLogin:hover {
+    color: #000;
+}
+
+.guitar-cart-count {
+    background: #dc3545;
+    padding: 2px 8px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.guitar-header-cart {
+    margin-right: 10px;
+    background: #dee2e6;
+    padding: 5px 20px;
+    cursor: pointer;
+    color: #212529 !important;
+    transition: 0.2s all ease-in;
+}
+
+.guitar-header-cart:hover {
+    text-decoration: none;
+    background: #444;
+    color: #fff !important;
+}
+
+.guitar-header-cart:hover .guitar-cart-count{
+    text-decoration: none;
+    background: #fff;
+    color: #444;
+}
+
+
+/* =========================== Cart ===================== */
+.guitar-cart-empty {
+    text-align: center;
+}
+
+.cart-empty-img {
+    cursor: pointer;
+}
+
+.guitar-img {
+    background: #fff;
+}
+
+@media (max-width:500px) {
+    .cart-empty-img {
+        width: 100%;
+    }
+
+    .guitar-cart-tablerow {
+        display: none;
+    }
+
+    .guitar-admin-logout {
+        background: #e74c3c;
+        margin-bottom: 10px;
+    }
+
+    .guitar-admin-username {
+        display: none;
+    }
+}
+
+
+
+@media (min-width: 1281px) {
+    .guitar-admin-logout {
+        padding: 2px 10px;
+        background: #c32515;
+        margin-left: 20px;
+        text-align: center;
+    }
+  }
+
+.guitar-cart-table {
+    background: #eee;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.guitar-cart-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.guitar-cart-imgbox {
+    overflow: hidden;
+}
+
+.guitar-cart-img {
+    width:100%;
+}
+
+.guitar-cart-tablerow {
+    background: #007bff;
+    color: #fff;
+    /* margin-top: 10px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0px 2px 2px 1px #086bd6;
+    margin-bottom: 7px;
+}
+
+.cart-total-billed {
+    background: #eee;
+    border: 2px solid #ccc;
+    min-height: 230px;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.cart-bill-summery {
+    text-align: center;
+    background: #444;
+    color: #fff;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+}
+
+.cart-totalitems, .cart-subtotal, .cart-gst {
+    margin: 10px 0px;
+}
+
+.cart-estimate-total {
+    margin: 10px 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.place-order {
+    text-align: center;
+    background: #4CAF50;
+    border-radius: 20px;
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.carttablerow {
+    border-bottom: 10px solid #ccc;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.guitar-cart-imgbox{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.guitar-cart-d-view {
+    background: #607D8B;
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.guitar-cart-d-view:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.guitar-cart-delete {
+    display: inline-block;
+    background: #F44336;
+    color: #fff;
+    padding: 2px 10px;
+}
+/* ===================== Body Homapage ================== */
+.guitar-search {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    outline: 0px !important;
+    box-shadow: none !important;
+    outline-color: transparent;
+}
+
+.guitar-box {
+    height: 350px;
+    overflow: hidden;   
+    position: relative;
+}
+
+.guitar-container-box {
+    background: #eee;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.guitar-title {
+    bottom: 0;
+    position: absolute;
+    z-index: 12;
+    background: #00000075;
+    color: #e9ecef;
+    width: 100%;
+    text-align: center;
+    padding: 10px 5px;
+}
+
+.guitar-price {
+    top: 0;
+    right: 0;
+    position: absolute;
+    z-index: 12;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #ffff;
+}
+
+.guitarHompageNoAva {
+    top: 5px;
+    left: 5px;
+    position: absolute;
+    z-index: 12;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #F44336;
+}
+
+.guitarHompageAva {
+    top: 5px;
+    left: 5px;
+    position: absolute;
+    z-index: 12;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+}
+
+.guitar-price-h6 {
+    margin: 0;
+    padding: 5px;
+}
+
+.guitrabox-link {
+    cursor: pointer;
+}
+
+.about-us-para {
+    background: #eee;
+    padding: 10px;
+}
+
+
+/* **********************************User Orders****************************** */
+.guitar-u-orders {
+    min-height: 400px;
+}
+.guitar-uo-detailbtn {
+    background: #FF5722;
+    text-align: center;
+    padding: 1px 10px;
+    color: #fff;
+}
+/* *******************************Accessories********************************* */
+
+.accessr-row{
+    background: #eee;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.accessr-col {
+    margin-bottom: 10px;
+}
+.accessr-box {
+    background: #FFF;
+}
+
+.accessr-detail {
+    background: #444;
+    color: #fff;
+    padding: 5px;
+}
+
+.accessr-price  {
+    background: #dc3545;
+    display: inline-block;
+    padding: 1px 11px;
+}
+
+.accessr-text {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.accessr-buy {
+    background: #007bff;
+    text-align: center;
+    border-radius: 15px;
+    padding: 2px 0px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.accessr-buy:hover {
+    background: #6a737d;
+}
+
+.accessr-size, .accessr-small, .accessr-med, .accessr-large {
+    display: inline-block
+}
+
+.access-size-selected {
+    background:#000 !important;
+}
+
+.accessr-small:hover, .accessr-med:hover, .accessr-large:hover {
+    background: #000;
+    /* padding: 5px 10px; */
+    /* border-radius: 5px; */
+}
+
+.accessr-size {
+    background: #eee;
+    padding: 0px 0px 0px 10px;
+    margin-left: 5px;
+    color: #444;
+    transition: all 0.3s ease-in-out;    
+}
+.accessr-small{
+    padding: 0px 10px;
+    background: #009688;
+    margin-left: 5px;
+    color: #FFF;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+}
+.accessr-med {
+    padding: 0px 10px;
+    background: #3F51B5;
+    color: #FFF;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.accessr-large {
+    padding: 0px 10px;
+    background: #FF5722;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/* ====================== Guitar Details================== */
+.guitar-detail-row {
+    background: #eee;
+    padding-top: 10px;
+}
+
+.guitar-d-info {
+    padding: 10px;
+    background: #ddd;
+    color: #444;
+    font-size: 15px;
+}
+
+.guitar-d-con {
+    margin-bottom: 10px;
+    /* margin-top: 10px; */
+}
+.guitar-ava-span{
+    background: #4CAF50;
+    padding: 0px 10px;
+    color: #fff;
+}
+
+.guitar-noava-span {
+    background: #F44336;
+    padding: 0px 10px;
+    color: #fff;
+}
+
+.guitar-detail-col {
+    /* align-items: center;
+    justify-content: center;
+    display: flex; */
+}
+
+.guitar-detail-box2 {
+    padding-bottom: 10px;
+    /* padding-top: 10px; */
+}
+
+.guitar-d-buy {
+    background: #FF9800;
+    display: inline-flex;
+    padding: 3px 50px;
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.guitar-d-relatedaccr {
+    background: #F44336;
+    color: #fff;
+    padding: 10px 10px;
+    margin: 0;
+}
+/* ==================== Footer ======================== */
+.guitar-footer {
+    background: #007bff !important;
+}
+.guitar-footer-a {
+    color: #fff;
+}
+
+.guitar-footer-icons-a {
+    margin: 5px;
+}
+.guitar-footer-icons, .guitar-footer-text {
+    color: #fff;
+}
+
+
+/* =================================================
+============Admin Dashboard Css=====================
+================================================= */
+.giutar-admin-nav {
+    background-color: #e74c3c;
+    border-color: #c0392b;
+    padding-top: 0 ;
+    padding-bottom: 0 ;
+}
+
+.giutar-admin-nav .navbar-brand {
+    color: #fff !important;
+}
+.guitar-admin-logout {
+    cursor: pointer;
+}
+
+.guitar-admin-logout, .guitar-admin-username {
+    display: block;
+}
+
+.guitar-admin-username {
+    margin-right: 10px;
+}
+
+.guitar-admin-footer {
+    background: #444;
+    color: #fff;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.admin-wrapper{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dashboard-header, .addNewGuitar-header, .addNewAccess-header {
+    background: #e74c3c;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.addNewGuitarCancel, .addNewAccessCancel {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.edit-guitar {
+    width: 100%;
+    /* margin-bottom: 5px; */
+}
+
+.edit-accessory {
+    /* margin-bottom: 5px; */
+}
+
+.activeAdminMenu {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.guitar-loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .guitar-loader-pre {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .searchGuitars {
+      cursor: pointer;
+  }
