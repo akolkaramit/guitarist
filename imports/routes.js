@@ -78,8 +78,6 @@ checkAdminPageAuth = ()=>{
 }
 // ************************************ Add Routes **************************************
 Meteor.startup(() => {
-  var userId = Meteor.userId();
-  var role = Roles.userIsInRole(userId, 'admin');
     
   render(
     <Router history={browserHistory}>
@@ -91,21 +89,18 @@ Meteor.startup(() => {
             <Route path="/cart" component = {Cart} onEnter={this.checkPageAuth()} />
             <Route path="/userOrders" component = {UserOrders}  onEnter={this.checkPageAuth()} />
         </Route>
-        {
-            role ? 
-                <Route path='/' component = { AdminWebsite}>
-                    <Route path="/dashboard" component = {Dashboard} onEnter={this.checkAdminPageAuth()} />
-                    <Route path="/addNewGuitar" component = {AddNewGuitar} onEnter={this.checkAdminPageAuth()} />
-                    <Route path="/addNewGuitar/:id" component = {AddNewGuitar} onEnter={this.checkAdminPageAuth()} />
-                    <Route path="/addAccessories" component = {AddAccessories} onEnter={this.checkAdminPageAuth()} />
-                    <Route path="/addAccessories/:id" component = {AddAccessories} onEnter={this.checkAdminPageAuth()} />
-                    <Route path="/addNewStrap" component = {AddStrap} onEnter={this.checkAdminPageAuth()} />
-                    <Route path="/addNewStrap/:id" component = {AddStrap} onEnter={this.checkAdminPageAuth()} />
-                    <Route path="/adminOrders" component = {OrdersList} onEnter={this.checkAdminPageAuth()} />
-                </Route>
-                :
-                <Route path="/forbidden" component = {Forbidden} />
-        }
+
+        <Route path='/' component = { AdminWebsite}>
+            <Route path="/dashboard" component = {Dashboard} onEnter={this.checkAdminPageAuth()} />
+            <Route path="/addNewGuitar" component = {AddNewGuitar} onEnter={this.checkAdminPageAuth()} />
+            <Route path="/addNewGuitar/:id" component = {AddNewGuitar} onEnter={this.checkAdminPageAuth()} />
+            <Route path="/addAccessories" component = {AddAccessories} onEnter={this.checkAdminPageAuth()} />
+            <Route path="/addAccessories/:id" component = {AddAccessories} onEnter={this.checkAdminPageAuth()} />
+            <Route path="/addNewStrap" component = {AddStrap} onEnter={this.checkAdminPageAuth()} />
+            <Route path="/addNewStrap/:id" component = {AddStrap} onEnter={this.checkAdminPageAuth()} />
+            <Route path="/adminOrders" component = {OrdersList} onEnter={this.checkAdminPageAuth()} />
+        </Route>
+
         <Route path="/forbidden" component = {Forbidden} />
         
     </Router>
