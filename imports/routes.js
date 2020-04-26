@@ -91,7 +91,7 @@ Meteor.startup(() => {
         {
             var userId = Meteor.userId();
             var role = Roles.userIsInRole(userId, 'admin');
-            console.log("role: ",role)
+
             if(role){
                 <Route path='/' component = { AdminWebsite}>
                     <Route path="/dashboard" component = {Dashboard} onEnter={this.checkAdminPageAuth()} />
