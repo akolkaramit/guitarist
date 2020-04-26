@@ -78,6 +78,9 @@ checkAdminPageAuth = ()=>{
 }
 // ************************************ Add Routes **************************************
 Meteor.startup(() => {
+  var userId = Meteor.userId();
+  var role = Roles.userIsInRole(userId, 'admin');
+    
   render(
     <Router history={browserHistory}>
         <Route path="/" component={Website}>
@@ -89,10 +92,7 @@ Meteor.startup(() => {
             <Route path="/userOrders" component = {UserOrders}  onEnter={this.checkPageAuth()} />
         </Route>
         {
-            var userId = Meteor.userId();
-            var role = Roles.userIsInRole(userId, 'admin');
-
-            if(role){
+            role ? 
                 <Route path='/' component = { AdminWebsite}>
                     <Route path="/dashboard" component = {Dashboard} onEnter={this.checkAdminPageAuth()} />
                     <Route path="/addNewGuitar" component = {AddNewGuitar} onEnter={this.checkAdminPageAuth()} />
@@ -102,8 +102,9 @@ Meteor.startup(() => {
                     <Route path="/addNewStrap" component = {AddStrap} onEnter={this.checkAdminPageAuth()} />
                     <Route path="/addNewStrap/:id" component = {AddStrap} onEnter={this.checkAdminPageAuth()} />
                     <Route path="/adminOrders" component = {OrdersList} onEnter={this.checkAdminPageAuth()} />
-                </Route>  
-            }
+                </Route>
+                :
+                <Route path="/forbidden" component = {Forbidden} />
         }
         <Route path="/forbidden" component = {Forbidden} />
         
