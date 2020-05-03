@@ -567,3 +567,101 @@ a {
   .searchGuitars {
       cursor: pointer;
   }
+
+
+body {
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.tambola-body {
+  background: #eee;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.tambola-wrapper {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.tambola-input {
+  width: 140px;
+  padding: 10px;
+  height: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tambola-form {
+  text-align: center;
+  background: #924eff;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.tambola-table {
+  background: #eee;
+  /* margin: 40px 0px 10px 0px; Dont add the Margin: Downloaded image distordet issue */
+  width: 100%;
+  border: 4px solid #d4c8c8;
+}
+
+.tambola-table-margin {
+  margin: 40px 0px 10px 0px;
+}
+
+.ticket-name {
+  margin: 0;
+  background: #3c423c;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.tambola-td {
+  text-align: center;
+  background: #924eff;
+  color: #fff;
+  padding: 10px;
+}
+
+.tambola-td-null {
+  text-align: center;
+  background: #ccc;
+  padding: 10px;
+}
+
+.tambola-btn {
+  background-color: #3c423c;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 13px 30px;
+  border-radius: 30px;
+}
+
+.tambola-download-ticket-btn {
+  background-color: #ff4e5a;
+  border: none;
+  color: #eee;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 13px 30px;
+  border-radius: 30px;
+}
+
