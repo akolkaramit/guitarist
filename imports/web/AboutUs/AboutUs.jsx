@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import tambola from "tambola-generator";
 import { saveAsJpeg } from "save-html-as-image";
-import "./App.css";
+
 
 class AboutUs extends Component {
   constructor(props) {
