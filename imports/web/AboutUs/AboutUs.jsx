@@ -208,4 +208,4 @@ class AboutUs extends Component {
   }
 }
 
-export default App;
+export default AboutUs;
